@@ -81,7 +81,7 @@ const BlockSeven = () => {
                 <img src={product.img} alt={product.title} className="w-full h-auto rounded mb-3" />
                 <p className="text-sm text-gray-700 mb-1">{product.title}</p>
                 <p className="font-semibold text-black mb-3">{product.price}</p>
-                <button className="bg-yellow-400 text-white px-3 py-2 text-sm rounded hover:bg-yellow-500 transition">
+                <button className="bg-yellow-400 text-white px-5 py-2 text-sm rounded-2xl hover:bg-yellow-500 transition">
                   Купить в 1 клик
                 </button>
               </div>
