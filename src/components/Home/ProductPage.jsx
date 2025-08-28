@@ -148,7 +148,7 @@ const ProductPage = () => {
           </p>
         </div>
       </div>
-
+my
       {/* Описание и отзывы */}
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
