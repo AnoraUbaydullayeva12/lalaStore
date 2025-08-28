@@ -16,12 +16,14 @@ const Navbar = () => {
         </span>
         <ul className="flex items-center gap-3 text-gray-400 ">
           <li className="hover:text-black transition">Каталог</li>
-         <Link to='/home'> <li className="hover:text-black transition">Главная</li></Link>
-        <li className="hover:text-black transition">Как купить</li>  
+          <Link to='/home'> <li className="hover:text-black transition">Главная</li></Link>
+          <li className="hover:text-black transition">Как купить</li>
           <li className="hover:text-black transition">Доставка</li>
-       <Link to='/about'>  <li className="hover:text-black transition">О компании</li></Link>
+          <Link to='/about'>  <li className="hover:text-black transition">О компании</li></Link>
           <li className="hover:text-black transition">Мы в instagram</li>
           <li className="hover:text-black transition">Акции</li>
+     <Link to='/personal'>       <li className="hover:text-black transition">Личный кабинет</li></Link>
+
         </ul>
       </nav>
     </div>

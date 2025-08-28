@@ -7,15 +7,10 @@ import BlockFive from "./BlockFive";
 import BlockSix from "./BlockSix";
 import BlockSeven from "./BlockSeven";
 import BlockEight from "./BlockEight";
-import Navbar from '../../components/Header/Navbar'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
-      <Header />
       <BlockOne />
       <BlockTwo />
       <BlockThree />
@@ -24,7 +19,6 @@ const Home = () => {
       <BlockSix />
       <BlockSeven />
       <BlockEight />
-      <Footer />
     </div>
   );
 };
