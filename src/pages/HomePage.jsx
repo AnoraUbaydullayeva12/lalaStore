@@ -1,86 +1,99 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Package, History, User, Lock, FileText, Bell } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Package, History, User, Lock, FileText, Bell } from "lucide-react";
 
 const HomePage = () => {
   const dashboardCards = [
     {
-      path: '/current-orders',
-      title: 'Текущие заказы',
+      path: "/current-orders",
+      title: "Текущие заказы",
       icon: Package,
-      image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Просмотр и управление текущими заказами'
+      image:
+        "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      path: '/order-history',
-      title: 'История заказов',
+      path: "/order-history",
+      title: "История заказов",
       icon: History,
-      image: 'https://images.pexels.com/photos/3760089/pexels-photo-3760089.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Полная история ваших заказов'
+      image:
+        "https://images.pexels.com/photos/3760089/pexels-photo-3760089.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      path: '/personal-data',
-      title: 'Личные данные',
+      path: "/personal-data",
+      title: "Личные данные",
       icon: User,
-      image: 'https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Управление личной информацией'
+      image:
+        "https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      path: '/change-password',
-      title: 'Сменить пароль',
+      path: "/change-password",
+      title: "Сменить пароль",
       icon: Lock,
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Изменение пароля для безопасности'
+      image:
+        "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      path: '/order-profile',
-      title: 'Профиль заказов',
+      path: "/order-profile",
+      title: "Профиль заказов",
       icon: FileText,
-      image: 'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Управление профилями пользователей'
+      image:
+        "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      path: '/subscriptions',
-      title: 'Подписки',
+      path: "/subscriptions",
+      title: "Подписки",
       icon: Bell,
-      image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Настройка email уведомлений'
-    }
+      image:
+        "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
   ];
 
   return (
-    <div className="py-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {dashboardCards.map((card) => {
-          const Icon = card.icon;
-          return (
-            <Link
-              key={card.path}
-              to={card.path}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden transform hover:-translate-y-1"
-            >
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/70 transition-all duration-300"></div>
-                <div className="absolute bottom-6 left-6">
-                  <Icon className="text-white mb-3 drop-shadow-lg" size={36} />
-                  <h3 className="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300 drop-shadow-lg">
-                    {card.title}
-                  </h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
+    <div className="container mx-auto px-4 py-8">
+      {/* Yuqori 2 ta card */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        {dashboardCards.slice(0, 2).map((card) => (
+          <Link
+            key={card.path}
+            to={card.path}
+            className="relative rounded-xl overflow-hidden shadow-md group h-56"
+          >
+            <img
+              src={card.image}
+              alt={card.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Gradient overlay - chapdan oq, o‘ngdan shaffof */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent"></div>
+            <div className="absolute inset-0 flex items-center px-6">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-800">
+                {card.title}
+              </h3>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Pastki 4 ta card */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        {dashboardCards.slice(2).map((card) => (
+          <Link
+            key={card.path}
+            to={card.path}
+            className="relative rounded-xl overflow-hidden shadow-md group h-40"
+          >
+            <img
+              src={card.image}
+              alt={card.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent"></div>
+            <div className="absolute inset-0 flex items-center px-4">
+              <h3 className="text-lg font-bold text-gray-800">{card.title}</h3>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
