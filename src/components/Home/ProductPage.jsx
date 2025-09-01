@@ -66,6 +66,7 @@ const Section = ({ title, items }) => (
 
 // ✅ Страница товара
 const ProductPage = () => {
+  const [selectedImage, setSelectedImage] = useState(product.images[0]);
   const [selectedSize, setSelectedSize] = useState(null);
   const [cartMessage, setCartMessage] = useState("");
   const [reviews, setReviews] = useState([]);
@@ -88,23 +89,24 @@ const ProductPage = () => {
       {/* Верхний блок товара */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Фото */}
-        <div className="flex gap-4">
-          <div className="flex flex-col gap-3">
-            {product.images.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`Фото ${i + 1}`}
-                className="w-24 h-28 object-cover rounded-lg border hover:scale-105 transition-transform"
-              />
-            ))}
-          </div>
-          <img
-            src={product.images[1]}
-            alt={product.name}
-            className="w-full max-w-sm rounded-lg shadow-md"
-          />
-        </div>
+     <div className="flex gap-4">
+  <div className="flex flex-col gap-3">
+    {product.images.map((img, i) => (
+      <img
+        key={i}
+        src={img}
+        alt={`Фото ${i + 1}`}
+        className="w-24 h-28 object-cover rounded-lg border hover:scale-105 transition-transform"
+      />
+    ))}
+  </div>
+  <img
+    src={product.images[1]}
+    alt={product.name}
+    className="w-full max-w-sm rounded-lg shadow-md"
+  />
+</div>
+
 
         {/* Инфо */}
         <div>
@@ -148,7 +150,7 @@ const ProductPage = () => {
           </p>
         </div>
       </div>
-my
+
       {/* Описание и отзывы */}
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
@@ -192,5 +194,5 @@ my
   );
 };
 
-// ✅ Экспортим именно страницу!
+
 export default ProductPage;
