@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import odej from "../assets/odejds.png";
-import ode from "../assets/ode.png";
-import od from "../assets/od.png";
+import odej from "../../assets/odejds.png";
+import ode from "../../assets/ode.png";
+import od from "../../assets/od.png";
 
 // Товар
 const product = {
