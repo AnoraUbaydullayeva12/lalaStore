@@ -47,15 +47,15 @@ const Header = () => {
         />
       </div>
       <div className="flex items-center gap-10">
-        <span className="text-sm flex items-center gap-1">
+        <span className="text-sm  gap-1">
           <FaHeart size={35} color="orange" />
           Избранное
         </span>
-        <span className="text-sm flex items-center gap-1">
+        <span className="text-sm gap-1">
           <LuShoppingBag size={35} />
           Корзина
         </span>
-        <span className="text-sm flex items-center gap-1">
+        <span className="text-sm gap-1">
           <FaRegUserCircle size={35} />
           Войти
         </span>
