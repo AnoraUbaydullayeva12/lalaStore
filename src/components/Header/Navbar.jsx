@@ -6,23 +6,28 @@ const Navbar = () => {
   return (
     <div className="bg-[#F4F4F4]">
       <nav className="flex justify-around items-center py-5">
-        <span className="flex items-center gap-5  text-black">
-          <FaLocationDot />
-          г. Москва, Электролитный проезд 3Б стр 6
-        </span>
-        <span className="flex items-center gap-5 text-black">
-          <FaPhoneAlt />
-          +7 916 361-30-00
-        </span>
+        <a href="https://yandex.uz/maps/213/moscow/house/elektrolitny_proyezd_3bs6/Z04YcAZjSUIFQFtvfXp2dHRkYA==/?ll=37.613072%2C55.675875&z=16" target="_blank">
+          <span className="flex items-center gap-5  text-black">
+            <FaLocationDot />
+            г. Москва, Электролитный проезд 3Б стр 6
+          </span>
+        </a>
+        <a href="tel:+79163613000">
+          <span className="flex items-center gap-5 text-black">
+            <FaPhoneAlt />
+            +7 916 361-30-00
+          </span>
+        </a>
+
         <ul className="flex items-center gap-3 text-gray-400 ">
-          <li className="hover:text-black transition">Каталог</li>
+        <Link to='/catalog'>  <li className="hover:text-black transition">Каталог</li></Link>
           <Link to='/home'> <li className="hover:text-black transition">Главная</li></Link>
           <li className="hover:text-black transition">Как купить</li>
           <li className="hover:text-black transition">Доставка</li>
           <Link to='/about'>  <li className="hover:text-black transition">О компании</li></Link>
-          <li className="hover:text-black transition">Мы в instagram</li>
+          <a href="https://www.instagram.com/accounts/login/" target="_blank">  <li className="hover:text-black transition">Мы в instagram</li></a>
           <li className="hover:text-black transition">Акции</li>
-     <Link to='/personal'>       <li className="hover:text-black transition">Личный кабинет</li></Link>
+          <Link to='/personal'>       <li className="hover:text-black transition">Личный кабинет</li></Link>
 
         </ul>
       </nav>

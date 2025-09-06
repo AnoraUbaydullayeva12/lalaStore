@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import About from './components/sojida/MainSection.jsx'
 import Personal from './components/pages/HomePage.jsx'
+import Catalog from './components/shxsh/Kiyim.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -23,12 +24,17 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
       },
+
       {
         path: "/about",
         element: <About />,
       }, {
         path: "/personal",
         element: <Personal />,
+      },
+      {
+        path: "/catalog",
+        element: <Catalog />,
       },
     ]
   },

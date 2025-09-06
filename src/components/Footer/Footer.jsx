@@ -43,7 +43,7 @@ const Footer = () => {
             <img src={Paykeeper} alt="" className="" />
             <FaCcMastercard size={35} />
 
-            <FaCcVisa size={35} />
+          <a href="https://cis.visa.com/visa-in-uzbekistan.html" target="_blank">  <FaCcVisa size={35} /></a>
           </div>
           <p className="text-gray-400 font-light">
             ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ

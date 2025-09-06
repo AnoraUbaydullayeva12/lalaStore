@@ -1,25 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
-
-// Images
-import Img1 from "../../assets/HomeImg/Block7.1.png";
-import Img2 from "../../assets/HomeImg/Block7.2.png";
-import Img3 from "../../assets/HomeImg/Block7.3.png";
-import Img4 from "../../assets/HomeImg/Block7.4.png";
-import Img5 from "../../assets/HomeImg/Block7.5.png";
-import Img6 from "../../assets/HomeImg/Block7.6.png";
-
-// Products data
-const products = [
-  { img: Img1, title: "Боди без рукавов 'ФРУКТИК', розовый", price: "349 ₴", status: "В наличии" },
-  { img: Img2, title: "Боди без рукавов 'ФРУКТИК', розовый", price: "349 ₴", status: "В наличии" },
-  { img: Img3, title: "Боди без рукавов 'ФРУКТИК', розовый", price: "349 ₴", status: "В наличии" },
-  { img: Img4, title: "Боди без рукавов 'ФРУКТИК', розовый", price: "349 ₴", status: "Нет в наличии" },
-  { img: Img5, title: "Боди без рукавов 'ФРУКТИК', розовый", price: "349 ₴", status: "На складе" },
-  { img: Img6, title: "Боди без рукавов 'ФРУКТИК', розовый", price: "349 ₴", status: "В наличии" },
-];
-
+import Img from '../../assets/HomeImg/Block7.1.png'
 const getStatusStyle = (status) => {
   switch (status) {
     case "В наличии":
@@ -34,8 +16,22 @@ const getStatusStyle = (status) => {
 };
 
 const BlockSeven = () => {
+  const [products, setProducts] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleCount = 5;
+
+  // Загружаем данные с сервера
+  useEffect(() => {
+    fetch("http://localhost:3000/products")
+      .then((res) => {
+        if (!res.ok) throw new Error("Ошибка загрузки данных");
+        return res.json();
+      })
+      .then((data) => setProducts(data))
+      .catch((error) => {
+        console.error("Ошибка при получении продуктов:", error);
+      });
+  }, []);
 
   const handleNext = () => {
     if (currentIndex + visibleCount < products.length) {
@@ -75,10 +71,16 @@ const BlockSeven = () => {
                 key={index}
                 className="w-[220px] flex-shrink-0 border rounded p-3 bg-white shadow-md text-center"
               >
-                <div className={`text-sm px-2 py-1 mb-2 rounded-full inline-block ${getStatusStyle(product.status)}`}>
+                <div
+                  className={`text-sm px-2 py-1 mb-2 rounded-full inline-block ${getStatusStyle(product.status)}`}
+                >
                   {product.status}
                 </div>
-                <img src={product.img} alt={product.title} className="w-full h-auto rounded mb-3" />
+                <img
+                  src={Img}
+                  alt={product.title}
+                  className="w-full h-auto rounded mb-3"
+                />
                 <p className="text-sm text-gray-700 mb-1">{product.title}</p>
                 <p className="font-semibold text-black mb-3">{product.price}</p>
                 <button className="bg-yellow-400 text-white px-5 py-2 text-sm rounded-2xl hover:bg-yellow-500 transition">
