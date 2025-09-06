@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Cart from '../components/Home/Cart';
-import ProductCard from '../components/Home/ProductCard';
+import Cart from '../../components/Home/Cart';
+import ProductCard from '../../components/Home/ProductCard';
 import { toast } from 'react-toastify';
 
 function Basket() {

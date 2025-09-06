@@ -10,7 +10,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/Home/Home.jsx';
-import Basket from './Basket.jsx';
+import Basket from './components/pages/Basket.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
