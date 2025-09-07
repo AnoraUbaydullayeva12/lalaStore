@@ -8,7 +8,7 @@
       "color": "розовый",
       "size": [56, 62],
       "status": "В наличии",
-      "image": "images/body-pink.jpg"
+      "image": "/assets/od.jpg"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "color": "голубой",
       "size": [56, 62],
       "status": "В наличии",
-      "image": "images/body-blue.jpg"
+      "image": "/assets/ode.jpg"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "color": "розовый",
       "size": [56, 62, 68],
       "status": "Нет в наличии",
-      "image": "images/body-pink-print.jpg"
+      "image": "/assets/odejds.jpg"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "color": "белый",
       "size": [56, 62, 68],
       "status": "На складе",
-      "image": "images/body-white.jpg"
+      "image": "/assets/od.jpg"
     }
   ]
 }
