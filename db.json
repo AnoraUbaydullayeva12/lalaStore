@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Боди без рукавов 'ФРУК-ТИК', розовый",
+      "price": 349,
+      "category": "Головные уборы",
+      "color": "розовый",
+      "size": [56, 62],
+      "status": "В наличии",
+      "image": "images/body-pink.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Боди без рукавов 'ФРУК-ТИК', голубой",
+      "price": 349,
+      "category": "Головные уборы",
+      "color": "голубой",
+      "size": [56, 62],
+      "status": "В наличии",
+      "image": "images/body-blue.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Боди с коротким рукавом 'ФРУК-ТИК', розовый с принтом",
+      "price": 349,
+      "category": "Головные уборы",
+      "color": "розовый",
+      "size": [56, 62, 68],
+      "status": "Нет в наличии",
+      "image": "images/body-pink-print.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Боди без рукавов 'ФРУК-ТИК', белый",
+      "price": 349,
+      "category": "Головные уборы",
+      "color": "белый",
+      "size": [56, 62, 68],
+      "status": "На складе",
+      "image": "images/body-white.jpg"
+    }
+  ]
+}
