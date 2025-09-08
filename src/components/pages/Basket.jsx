@@ -4,7 +4,12 @@ import ProductCard from '../../components/Home/ProductCard';
 import { toast } from 'react-toastify';
 
 function Basket() {
-  const [cartItems, setCartItems] = useState([]);
+
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCart = localStorage.getItem('cartItems');
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+
   const [recentlyViewed, setRecentlyViewed] = useState([]);
 
   useEffect(() => {
@@ -21,20 +26,23 @@ function Basket() {
   }, []);
 
   useEffect(() => {
-    const storedCart = localStorage.getItem('cartItems');
-    if (storedCart) {
-      setCartItems(JSON.parse(storedCart));
-    }
-  }, []);
-
-  useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
 
   const handleAddToCart = (id) => {
     const product = recentlyViewed.find((item) => item.id === id);
+
     if (product) {
-      setCartItems((prev) => [...prev, { ...product, quantity: 1, isSelected: false }]);
+      setCartItems((prev) => {
+        const existing = prev.find((item) => item.id === id);
+        if (existing) {
+          return prev.map((item) =>
+            item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+          );
+        }
+        return [...prev, { ...product, quantity: 1, isSelected: false }];
+      });
+
       toast.success(`Товар "${product.title}" добавлен в корзину 🛒`);
     }
   };
@@ -42,8 +50,9 @@ function Basket() {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <Cart items={cartItems} onItemsChange={setCartItems} />
+
       <div className="max-w-[90%] mx-auto mt-10">
-        <h2 className="text-2xl font-bold mb-6">Недавно просмотренные</h2>
+        <h2 className="text-2xl font-bold mb-6">НОВЫЕ ПРОДУКТЫ!</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {recentlyViewed.map((product) => (
             <ProductCard
