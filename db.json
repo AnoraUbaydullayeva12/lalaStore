@@ -1,44 +1,54 @@
 {
   "products": [
-    {
-      "id": 1,
-      "title": "Боди без рукавов 'ФРУК-ТИК', розовый",
-      "price": 349,
-      "category": "Головные уборы",
-      "color": "розовый",
-      "size": [56, 62],
-      "status": "В наличии",
-      "image": "/assets/od.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Боди без рукавов 'ФРУК-ТИК', голубой",
-      "price": 349,
-      "category": "Головные уборы",
-      "color": "голубой",
-      "size": [56, 62],
-      "status": "В наличии",
-      "image": "/assets/ode.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Боди с коротким рукавом 'ФРУК-ТИК', розовый с принтом",
-      "price": 349,
-      "category": "Головные уборы",
-      "color": "розовый",
-      "size": [56, 62, 68],
-      "status": "Нет в наличии",
-      "image": "/assets/odejds.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Боди без рукавов 'ФРУК-ТИК', белый",
-      "price": 349,
-      "category": "Головные уборы",
-      "color": "белый",
-      "size": [56, 62, 68],
-      "status": "На складе",
-      "image": "/assets/od.jpg"
-    }
+    { "id": 1, "title": "Боди без рукавов 'ФРУК-ТИК', розовый", "price": 349, "color": "розовый", "size": [56, 62], "status": "В наличии", "image": "/assets/od.png" },
+    { "id": 2, "title": "Боди без рукавов 'ФРУК-ТИК', голубой", "price": 379, "color": "голубой", "size": [56, 62], "status": "В наличии", "image": "/assets/ode.png" },
+    { "id": 3, "title": "Боди с коротким рукавом 'ФРУК-ТИК', розовый с принтом", "price": 429, "color": "розовый", "size": [62, 68], "status": "Нет в наличии", "image": "/assets/odejds.png" },
+    { "id": 4, "title": "Боди без рукавов 'ФРУК-ТИК', белый", "price": 459, "color": "белый", "size": [56, 62, 68], "status": "На складе", "image": "/assets/odes.jpg" },
+
+    { "id": 5, "title": "Пижама детская 'Сонечка', розовый", "price": 499, "color": "розовый", "size": [62, 68, 74], "status": "В наличии", "image": "/assets/od.png" },
+    { "id": 6, "title": "Пижама детская 'Сонечка', голубой", "price": 529, "color": "голубой", "size": [62, 68, 74], "status": "В наличии", "image": "/assets/ode.png" },
+    { "id": 7, "title": "Комбинезон 'Космос', синий", "price": 569, "color": "синий", "size": [68, 74, 80], "status": "На складе", "image": "/assets/odejds.png" },
+    { "id": 8, "title": "Комбинезон 'Космос', белый", "price": 599, "color": "белый", "size": [68, 74, 80], "status": "В наличии", "image": "/assets/odes.jpg" },
+
+    { "id": 9, "title": "Боди с длинным рукавом 'Мишка', бежевый", "price": 639, "color": "бежевый", "size": [56, 62, 68], "status": "В наличии", "image": "/assets/od.png" },
+    { "id": 10, "title": "Боди с длинным рукавом 'Мишка', серый", "price": 679, "color": "серый", "size": [62, 68, 74], "status": "На складе", "image": "/assets/ode.png" },
+    { "id": 11, "title": "Комбинезон утеплённый 'Зайка', розовый", "price": 719, "color": "розовый", "size": [68, 74, 80], "status": "В наличии", "image": "/assets/odejds.png" },
+    { "id": 12, "title": "Комбинезон утеплённый 'Зайка', голубой", "price": 759, "color": "голубой", "size": [74, 80, 86], "status": "В наличии", "image": "/assets/odes.jpg" },
+
+    { "id": 13, "title": "Платье детское 'Принцесса', розовое", "price": 799, "color": "розовый", "size": [68, 74, 80], "status": "На складе", "image": "/assets/od.png" },
+    { "id": 14, "title": "Платье детское 'Принцесса', сиреневое", "price": 839, "color": "сиреневый", "size": [74, 80, 86], "status": "В наличии", "image": "/assets/ode.png" },
+    { "id": 15, "title": "Костюм 'Спорт', серый", "price": 879, "color": "серый", "size": [80, 86, 92], "status": "Нет в наличии", "image": "/assets/odejds.png" },
+    { "id": 16, "title": "Костюм 'Спорт', чёрный", "price": 919, "color": "чёрный", "size": [80, 86, 92], "status": "В наличии", "image": "/assets/odes.jpg" },
+
+    { "id": 17, "title": "Футболка 'Смайлик', жёлтая", "price": 959, "color": "жёлтый", "size": [86, 92, 98], "status": "В наличии", "image": "/assets/od.png" },
+    { "id": 18, "title": "Футболка 'Смайлик', зелёная", "price": 999, "color": "зелёный", "size": [86, 92, 98], "status": "На складе", "image": "/assets/ode.png" },
+    { "id": 19, "title": "Комбинезон 'Звёзды', синий", "price": 1049, "color": "синий", "size": [92, 98, 104], "status": "В наличии", "image": "/assets/odejds.png" },
+    { "id": 20, "title": "Комбинезон 'Звёзды', чёрный", "price": 1099, "color": "чёрный", "size": [92, 98, 104], "status": "В наличии", "image": "/assets/odes.jpg" },
+
+    { "id": 21, "title": "Боди 'Дино', зелёный", "price": 1149, "color": "зелёный", "size": [62, 68, 74], "status": "На складе", "image": "/assets/od.png" },
+    { "id": 22, "title": "Боди 'Дино', оранжевый", "price": 1199, "color": "оранжевый", "size": [68, 74, 80], "status": "В наличии", "image": "/assets/ode.png" },
+    { "id": 23, "title": "Костюм 'Зверята', розовый", "price": 1249, "color": "розовый", "size": [74, 80, 86], "status": "В наличии", "image": "/assets/odejds.png" },
+    { "id": 24, "title": "Костюм 'Зверята', голубой", "price": 1299, "color": "голубой", "size": [74, 80, 86], "status": "В наличии", "image": "/assets/odes.jpg" },
+
+    { "id": 25, "title": "Комбинезон 'Моряк', бело-синий", "price": 1349, "color": "синий", "size": [80, 86, 92], "status": "В наличии", "image": "/assets/od.png" },
+    { "id": 26, "title": "Комбинезон 'Моряк', голубой", "price": 1399, "color": "голубой", "size": [86, 92, 98], "status": "На складе", "image": "/assets/ode.png" },
+    { "id": 27, "title": "Пижама 'Ночной лес', зелёная", "price": 1449, "color": "зелёный", "size": [92, 98, 104], "status": "В наличии", "image": "/assets/odejds.png" },
+    { "id": 28, "title": "Пижама 'Ночной лес', серая", "price": 1499, "color": "серый", "size": [92, 98, 104], "status": "В наличии", "image": "/assets/odes.jpg" },
+
+    { "id": 29, "title": "Боди 'Панда', белый", "price": 1549, "color": "белый", "size": [62, 68, 74], "status": "На складе", "image": "/assets/od.png" },
+    { "id": 30, "title": "Боди 'Панда', чёрный", "price": 1599, "color": "чёрный", "size": [68, 74, 80], "status": "В наличии", "image": "/assets/ode.png" },
+
+    { "id": 31, "title": "Футболка 'Лето', зелёная", "price": 315, "color": "зелёный", "size": [80, 86, 92], "status": "В наличии", "image": "/assets/odejds.png" },
+    { "id": 32, "title": "Футболка 'Лето', жёлтая", "price": 355, "color": "жёлтый", "size": [80, 86, 92], "status": "В наличии", "image": "/assets/odes.jpg" },
+    { "id": 33, "title": "Комбинезон 'Сафари', песочный", "price": 399, "color": "бежевый", "size": [86, 92, 98], "status": "На складе", "image": "/assets/od.png" },
+    { "id": 34, "title": "Комбинезон 'Сафари', зелёный", "price": 455, "color": "зелёный", "size": [86, 92, 98], "status": "В наличии", "image": "/assets/ode.png" },
+
+    { "id": 35, "title": "Платье 'Цветочек', розовое", "price": 525, "color": "розовый", "size": [92, 98, 104], "status": "В наличии", "image": "/assets/odejds.png" },
+    { "id": 36, "title": "Платье 'Цветочек', белое", "price": 615, "color": "белый", "size": [92, 98, 104], "status": "В наличии", "image": "/assets/odes.jpg" },
+    { "id": 37, "title": "Костюм 'Мишутка', коричневый", "price": 745, "color": "коричневый", "size": [98, 104, 110], "status": "Нет в наличии", "image": "/assets/od.png" },
+    { "id": 38, "title": "Костюм 'Мишутка', серый", "price": 875, "color": "серый", "size": [98, 104, 110], "status": "В наличии", "image": "/assets/ode.png" },
+
+    { "id": 39, "title": "Боди 'Облака', голубой", "price": 945, "color": "голубой", "size": [62, 68, 74], "status": "В наличии", "image": "/assets/odejds.png" },
+    { "id": 40, "title": "Боди 'Облака', белый", "price": 1155, "color": "белый", "size": [62, 68, 74], "status": "В наличии", "image": "/assets/odes.jpg" }
   ]
 }
