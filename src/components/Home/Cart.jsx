@@ -29,6 +29,10 @@ const Cart = ({ items, onItemsChange }) => {
     onItemsChange([]);
     toast.error('Все товары удалены ❌');
   };
+  const handlebuy = () => {
+    onItemsChange([]);
+    toast.success('Все товары куплены ✅');
+  };
 
   const selectedItems = items.filter(item => item.isSelected);
   const totalCount = selectedItems.reduce((sum, item) => sum + item.quantity, 0);
@@ -60,6 +64,7 @@ const Cart = ({ items, onItemsChange }) => {
               onQuantityChange={handleQuantityChange}
               onRemove={handleRemove}
               onToggleSelect={handleToggleSelect}
+
             />
           ))}
         </div>
@@ -96,7 +101,7 @@ const Cart = ({ items, onItemsChange }) => {
             <div className="space-y-3">
               <button
                 disabled={selectedItems.length === 0}
-                onClick={() => toast.success('Заказ оформлен ✅')}
+                onClick={handlebuy}
                 className="w-full py-3 px-4 bg-yellow-400 hover:bg-yellow-500 disabled:bg-gray-300 disabled:cursor-not-allowed text-gray-900 font-semibold rounded-lg transition-colors"
               >
                 Оформить заказ
