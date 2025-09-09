@@ -5,6 +5,7 @@ import App from './App.jsx'
 import About from './components/sojida/MainSection.jsx'
 import Personal from './components/pages/HomePage.jsx'
 import Catalog from './components/shxsh/Kiyim.jsx'
+import Promotion from './components/pages/SellPage.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -45,7 +46,11 @@ const router = createBrowserRouter([
       {
         path: "/basket",
         element: <Basket/>
-      }
+      },
+      {
+        path: "/promotion",
+        element: <Promotion />,
+      },
     ]
   },
 ]);
