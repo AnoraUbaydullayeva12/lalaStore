@@ -3,7 +3,7 @@ import Logo from "../../assets/logo.png";
 import { FaHeart } from "react-icons/fa";
 import { LuShoppingBag } from "react-icons/lu";
 import { FaRegUserCircle } from "react-icons/fa";
-
+import {Link} from "react-router-dom"
 const SearchComponent = ({ query, setQuery, handleSearch }) => {
   return (
     <div className="flex justify-center items-center mt-10">
@@ -47,15 +47,17 @@ const Header = () => {
         />
       </div>
       <div className="flex items-center gap-10">
-        <span className="text-sm  gap-1">
+        <span className="text-sm text-gray-500   gap-1">
           <FaHeart size={35} color="orange" />
           Избранное
         </span>
-        <span className="text-sm gap-1">
-          <LuShoppingBag size={35} />
-          Корзина
-        </span>
-        <span className="text-sm gap-1">
+        <Link to="/basket">
+          <span className="text-sm  text-gray-500 gap-1">
+            <LuShoppingBag size={35} color=""/>
+            Корзина
+          </span>
+        </Link>
+        <span className="text-sm text-gray-500  gap-1">
           <FaRegUserCircle size={35} />
           Войти
         </span>
