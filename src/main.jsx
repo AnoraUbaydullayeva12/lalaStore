@@ -4,12 +4,14 @@ import './index.css'
 import App from './App.jsx'
 import About from './components/sojida/MainSection.jsx'
 import Personal from './components/pages/HomePage.jsx'
+import Catalog from './components/shxsh/Kiyim.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/Home/Home.jsx';
 import My from "./components/Home/ProductPage.jsx"
+import Basket from './components/pages/Basket.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
       },
+
       {
         path: "/about",
         element: <About />,
@@ -35,6 +38,14 @@ const router = createBrowserRouter([
         path: "/products/:id",
         element: <My/>
       },
+      {
+        path: "/catalog",
+        element: <Catalog />,
+      },
+      {
+        path: "/basket",
+        element: <Basket/>
+      }
     ]
   },
 ]);

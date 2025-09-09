@@ -1,8 +1,8 @@
 import React from 'react'
-import Section1 from '../sojida/section1'
-import Section2 from '../sojida/section2'
-import Section3 from '../sojida/section3'
-import Section4 from '../sojida/section4'
+import Section1 from './section1'
+import Section2 from './section2'
+import Section3 from './section3'
+import Section4 from './section4'
 
 const MainSection = () => {
   return (
