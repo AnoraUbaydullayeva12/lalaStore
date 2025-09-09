@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const defaultFilters = {
   color: "",
@@ -40,6 +41,13 @@ export default function Products() {
       (filters.priceTo ? p.price <= Number(filters.priceTo) : true)
     );
   });
+
+  const savetoCart = (product, e) => {    
+    const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push(product);
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    toast.success("Товар добавлен в корзину");
+  }
 
   return (
     <div className="p-6 text-black">
@@ -176,7 +184,7 @@ export default function Products() {
                   {p.status}
                 </span>
 
-                <button className="mt-4 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 rounded-lg transition">
+                <button onClick={() => savetoCart(p)} className="mt-4 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 rounded-lg transition">
                   Купить в один клик
                 </button>
               </div>
