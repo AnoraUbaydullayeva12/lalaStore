@@ -27,7 +27,7 @@ const Navbar = () => {
           <Link to='/about'>  <li className="hover:text-black transition">О компании</li></Link>
           <a href="https://www.instagram.com/accounts/login/" target="_blank">  <li className="hover:text-black transition">Мы в instagram</li></a>
           
-          <li className="hover:text-black transition">Мы в instagram</li>
+          
           <Link to='/promotion'> <li className="hover:text-black transition">Акции</li></Link>
           <Link to='/personal'>       <li className="hover:text-black transition">Личный кабинет</li></Link>
         </ul>
